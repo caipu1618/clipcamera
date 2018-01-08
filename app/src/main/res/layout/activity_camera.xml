@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_title">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_camera_pre"
+                android:background="@color/black70" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ll_camera_pre"
+                android:background="@color/black70" />
+
+            <RelativeLayout
+                android:id="@+id/ll_camera_pre"
+                android:layout_width="match_parent"
+                android:layout_height="211dp"
+                android:layout_centerInParent="true">
+
+                <View
+                    android:id="@+id/left_camera_pre"
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/black70" />
+
+                <View
+                    android:id="@+id/right_camera_pre"
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/black70" />
+
+                <ImageView
+                    android:id="@+id/iv_camera_pre"
+                    android:layout_width="match_parent"
+                    android:layout_height="211dp"
+                    android:layout_toLeftOf="@+id/right_camera_pre"
+                    android:layout_toRightOf="@+id/left_camera_pre" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_opera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="拍摄区域"
+                android:textColor="#ffa800"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_1"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="请将拍摄内容置入虚线框内,确保文字清晰"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:onClick="doCamera"
+                    android:src="@drawable/btn_camera" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>
