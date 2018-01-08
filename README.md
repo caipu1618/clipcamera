@@ -23,6 +23,7 @@
 ### 3.How to use clipcamera.
 
     CPUtil.startCamera(fileDir, filename, requestCode, activity); -use custom camera
+    
     CPUtil.startLocalCamera(fileDir, filename, fileprovider(for android7.0), requestCode, activity); -use local camera
     
 ### 4.Override onActivityResult method and handle clipcamera result.
