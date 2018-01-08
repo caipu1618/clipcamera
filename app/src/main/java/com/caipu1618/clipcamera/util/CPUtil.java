@@ -1,6 +1,7 @@
 package com.caipu1618.clipcamera.util;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -12,6 +13,8 @@ import android.text.TextUtils;
 import android.view.Surface;
 import android.widget.Toast;
 
+import com.caipu1618.clipcamera.camera.CameraActivity;
+
 import java.io.File;
 
 /**
@@ -19,6 +22,12 @@ import java.io.File;
  */
 
 public class CPUtil {
+
+    public static void startCamera(Context context){
+        Intent intent = new Intent();
+        intent.setClass(context, CameraActivity.class);
+        startCamera(context);
+    }
 
     /**
      * 调用系统拍照
@@ -28,7 +37,7 @@ public class CPUtil {
      * @param requestCode
      * @param activity
      */
-    public static void startCamera(String fileDir, String filename, String fileprovider, int requestCode, Activity activity) {
+    public static void startLocalCamera(String fileDir, String filename, String fileprovider, int requestCode, Activity activity) {
         try {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             if (intent.resolveActivity(activity.getPackageManager()) != null) {
