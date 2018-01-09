@@ -23,6 +23,10 @@ import java.io.File;
 
 public class CPUtil {
 
+    /**
+     * 调用自定义拍照
+     * @param context
+     */
     public static void startCamera(Context context){
         Intent intent = new Intent();
         intent.setClass(context, CameraActivity.class);
