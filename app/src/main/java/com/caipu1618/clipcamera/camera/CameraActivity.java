@@ -180,7 +180,6 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback{
         try {
             setupCamera(camera);
             camera.setPreviewDisplay(holder);
-            //亲测的一个方法 基本覆盖所有手机 将预览矫正
             CPUtil.setCameraDisplayOrientation(this, mCameraId, camera);
             camera.startPreview();
             isview = true;
